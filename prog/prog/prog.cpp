@@ -179,3 +179,24 @@ void sort(void)
 		fclose(F4);
 	}
 }
+
+int main(void)
+{
+	SetConsoleCP(1251);     //русификация
+	SetConsoleOutputCP(1251);
+	srand(time(NULL));
+	int s = 1;
+	while (s != 0)
+	{
+		menu();
+		s = _getch();
+		switch (s)
+		{
+		case'1': system("cls"); sort(); break;
+		case'2': system("cls"); random(); break;
+		case'3': system("cls"); exit(0); break;
+		default: system("cls");
+		}
+	}
+	return 0;
+}
